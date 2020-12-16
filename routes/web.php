@@ -26,6 +26,8 @@ Auth::routes();
 
 Route::get('/admin','AdminController@index');
 
+Route::get('admin/addAdult','AdminController@create');
+
 
 // USER ROUTES
 

@@ -25,7 +25,9 @@ class AdminController extends Controller
      */
     public function create()
     {
-        //
+        //FORM TO ADD A CAT IN DATABASE
+
+        return view ('admin.addAdult');
     }
 
     /**

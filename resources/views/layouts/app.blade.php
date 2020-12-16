@@ -140,6 +140,7 @@
         #navbarDropdown {
             width: 165px;
         }
+       
 
         .dropdown-menu {
             background: #4568dc;
@@ -172,6 +173,17 @@
             margin-left: 250px;
             margin-top: 70px;
 
+        }
+        .btn-info{
+            width: 100%;
+            font-size: 30px;
+        }
+        #image{
+            font-size:25px;
+        }
+        input,textarea{
+            font-size: 15px;
+            font-family: 'Raleway', sans-serif;
         }
     </style>
 </head>

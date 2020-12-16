@@ -220,15 +220,19 @@
 
         <div class="dropdown">
             <div class="text-center">
-                <p class="text-center text">Welcome admin {{ Auth::user()->name }}. Choose an option down below,please.</p><br>
+                <p class="text-center text">Welcome admin {{ Auth::user()->name }}. What do you want to do?.</p><br>
                 <button class="btn btn-success dropdown-toggle btn-lg " type="button" id="dropdownMenuButton"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     Options
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="{{url('/users/adultCats')}}">Add an adult cats</a>
-                    <a class="dropdown-item" href="#">Kittens</a>
-                    <a class="dropdown-item" href="#">Special cases</a>
+                    <a class="dropdown-item" href="{{url('/admin/addAdult')}}">Add an adult cat</a>
+                    <a class="dropdown-item" href="#">Add a Kitten</a>
+                    <a class="dropdown-item" href="#">Add a special case</a>
+                    <a class="dropdown-item" href="#">Consult adult cats</a>
+                    <a class="dropdown-item" href="#">Consult kittens</a>
+                    <a class="dropdown-item" href="#">Consult special cases</a>
+                    <a class="dropdown-item" href="#">Consult users</a>
                 </div><br><br>
             </div>
         </div>
