@@ -26,7 +26,11 @@ Auth::routes();
 
 Route::get('/admin','AdminController@index');
 
-Route::get('admin/addAdult','AdminController@create');
+Route::get('admin/addAdult','AdminController@addAdult');
+
+Route::post('admin/addAdult/prova','AdminController@store');
+
+Route::get('/admin/adultCats','AdminController@showAdultCat');
 
 
 // USER ROUTES

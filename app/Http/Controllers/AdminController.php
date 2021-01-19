@@ -2,35 +2,41 @@
 
 namespace App\Http\Controllers;
 
+use App\addAdult;
+
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
     /**
+     * ADMIN´S HOME
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        // ADMIN HOME
+        
 
         return view('admin.index');
     }
 
+
     /**
+     * ADD AN ADULT CAT IN DATABASE
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function addAdult()
     {
-        //FORM TO ADD A CAT IN DATABASE
-
         return view ('admin.addAdult');
     }
 
+
+
     /**
+     * SAVE A PROFILE PHOTO IN DATABASE
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -38,8 +44,37 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // UPLOAD PHOTO
+
+        $input = $request->all();
+
+        $file = $request->file('image');
+
+        if ($file) {
+
+            $filename = $file->getClientOriginalName(); // PHOTO´S NAME
+
+            $file->move('images', $filename);
+
+            $input['image'] = $filename;
+        }
+
+
+        addAdult::create($input);
     }
+
+    /**
+     * SHOW ALL ADULT CATS OF DATABASE
+     * 
+     */
+
+     public function showAdultCat()
+    {
+       $cats=addAdult::all();
+
+       return view("admin.adultCats",compact('cats'));
+    }
+
 
     /**
      * Display the specified resource.

@@ -6,19 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
+
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!--BOOTSTRAP-->
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
+   
+    <!-- GOOGLE FONTS -->
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
 
@@ -28,6 +32,7 @@
 
 
     <!-- CSS-->
+
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
 
     <!-- FONT AWESOME -->
@@ -70,7 +75,7 @@
         .card-header {
             font-family: 'Dancing Script', cursive;
             text-align: center;
-            font-size: 60px;
+            font-size: 40px;
             background: #4568dc;
             /* fallback for old browsers */
             background: -webkit-linear-gradient(to right,
@@ -101,7 +106,7 @@
 
         .form-group {
             font-family: 'Dancing Script', cursive;
-            font-size: 30px;
+            font-size: 25px;
         }
 
         .footer {
@@ -124,7 +129,9 @@
         }
 
         .form-control {
-            font-size: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
         }
 
         .text {
@@ -140,7 +147,7 @@
         #navbarDropdown {
             width: 165px;
         }
-       
+
 
         .dropdown-menu {
             background: #4568dc;
@@ -159,7 +166,7 @@
         }
 
         .dropdown-item {
-            color:black;
+            color: black;
             font-size: 20px;
 
         }
@@ -174,14 +181,18 @@
             margin-top: 70px;
 
         }
-        .btn-info{
+
+        .btn-info {
             width: 100%;
-            font-size: 30px;
+            font-size: 25px;
         }
-        #image{
-            font-size:25px;
+
+        #image {
+            font-size: 20px;
         }
-        input,textarea{
+
+        input,
+        textarea {
             font-size: 15px;
             font-family: 'Raleway', sans-serif;
         }
@@ -194,7 +205,7 @@
         <div class="wrapper">
             <div class="logo">
                 Garden of cats &nbsp; <i class="fas fa-cat"></i>
-                
+
             </div>
 
             <div class="container2">
@@ -203,20 +214,20 @@
                 <ul class="navbar-nav ml-auto">
                     <!-- Authentication Links -->
                     @guest
-    
+
                     @else
                     <li class="nav-item dropdown">
-                        <button id="navbarDropdown" class="btn btn-success dropdown-toggle  btn-lg" href="#" type="button"
-                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <button id="navbarDropdown" class="btn btn-success dropdown-toggle  btn-lg" href="#"
+                            type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }}
                         </button>
-    
+
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
-    
+
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf
                             </form>
@@ -230,7 +241,7 @@
     </div>
     <div id="app">
 
-        
+
     </div>
 
 
@@ -246,6 +257,7 @@
         <footer> <i class="fas fa-copyright"></i> 2020 Sergi Sánchez </footer>
     </div>
 
+    <!-- BOOTSTRAP JS-->
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
         integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous">
@@ -254,7 +266,7 @@
         integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous">
     </script>
 
-
+    
 
 </body>
 

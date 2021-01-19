@@ -10,7 +10,7 @@
                 <div class="card-header">{{ __('Add an adult cat') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{action('AdminController@create')}}" enctype="multipart/form-data">
+                    <form method="POST" action="{{action('AdminController@store')}}" enctype="multipart/form-data">
                         @csrf
 
                         <!-- IMAGE-->
@@ -30,7 +30,7 @@
 
                             <div class="col-md-6">
                                 <input id="name" type="text" id="namesInputs"
-                                    class="form-control @error('name') is-invalid @enderror" name="catName"
+                                    class="form-control @error('name') is-invalid @enderror" name="name"
                                     value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                             </div>

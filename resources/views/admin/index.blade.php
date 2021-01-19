@@ -134,7 +134,7 @@
         }
 
         #dropdownMenuButton {
-            width: 175px;
+            width: 240px;
         }
 
         #navbarDropdown {
@@ -160,6 +160,7 @@
         .dropdown-item {
             color:black;
             font-size: 20px;
+            font-weight: bold;
 
         }
 
@@ -229,7 +230,7 @@
                     <a class="dropdown-item" href="{{url('/admin/addAdult')}}">Add an adult cat</a>
                     <a class="dropdown-item" href="#">Add a Kitten</a>
                     <a class="dropdown-item" href="#">Add a special case</a>
-                    <a class="dropdown-item" href="#">Consult adult cats</a>
+                    <a class="dropdown-item" href="{{url('/admin/adultCats')}}">Consult adult cats</a>
                     <a class="dropdown-item" href="#">Consult kittens</a>
                     <a class="dropdown-item" href="#">Consult special cases</a>
                     <a class="dropdown-item" href="#">Consult users</a>
